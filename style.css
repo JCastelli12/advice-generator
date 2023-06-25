@@ -1,0 +1,98 @@
+:root {
+  --clr-primary-light-green: hsl(193, 38%, 86%);
+  --clr-primary-green: hsl(150, 100%, 66%);
+
+  --clr-neutral-white: hsl(0, 100%, 100%);
+  --clr-neutral-medium-gray: hsl(217, 19%, 38%);
+  --clr-neutral-dark-gray: hsl(217, 19%, 24%);
+  --clr-neutral-very-dark-gray: hsl(218, 23%, 16%);
+
+  --ff-manrope: 'Manrope', sans-serif;
+
+  --fw-400: 400;
+  --fw-800: 800;
+  --fw-900: 900;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+picture,
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-manrope);
+  font-weight: var(--fw-800);
+  background-color: var(--clr-neutral-very-dark-gray);
+  display: grid;
+  justify-items: center;
+  place-content: center;
+}
+
+.main-container {
+  position: relative;
+  width: min(90%, 500px);
+  padding-block: 2.5rem 4rem;
+  padding-inline: clamp(1rem, 1.5vw, 2rem);
+  background-color: var(--clr-neutral-dark-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.main-container h1 {
+  font-size: 0.75rem;
+  color: var(--clr-primary-green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.main-container h2 {
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+  color: var(--clr-primary-light-green);
+  line-height: 1.4;
+}
+
+.main-container button {
+  position: absolute;
+  bottom: -1.75rem;
+  padding: 1rem;
+  border: transparent;
+  border-radius: 50%;
+  background-color: var(--clr-primary-green);
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+.main-container button:hover {
+  box-shadow: 0 0 30px var(--clr-primary-green);
+  scale: 1.025;
+}
